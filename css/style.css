@@ -9,6 +9,7 @@
 :root {
     --black: #000;
     --white: #fff;
+    --bg-white: #fbfbfb;
     --green: #93f203;
     --blue: #6805f1;
     --light-gray: #F0EFEF;
@@ -19,6 +20,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Work Sans", sans-serif !important;
+    background-color: var(--bg-white);
+    color: var(--black);
 }
 
 h1 {
@@ -35,6 +38,25 @@ h3 {
 
 h4 {
     font-size: 30px !important;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+p {
+    margin: 0 !important;
 }
 
 /* nav-bar */
@@ -88,19 +110,36 @@ h4 {
     text-align: center;
 }
 
-a.nav-btn {
+.nav-btn {
+    position: relative;
+    display: inline-block;
     background-color: var(--blue);
     color: var(--white);
     padding: 10px 20px;
     border-radius: 26px;
     text-decoration: none;
     font-size: 19px;
-    transition: all 0.8s ease;
+    overflow: hidden;
+    z-index: 1;
 }
 
-a.nav-btn:hover {
-    background-color: var(--black);
+.nav-btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:var(--black);
+    top: 0;
+    right: 0;
+    clip-path: circle(0% at 0% 0%);
+    transition: 1s ease;
+    z-index: -1;
 }
+
+.nav-btn:hover::before {
+    clip-path: circle(150% at 0% 0%);
+}
+
 
 /* Toggle Button */
 .menu-toggle {
@@ -136,12 +175,26 @@ section.hero-section {
     top: 0;
     right: 0;
 }
-.hero-container{
-    position: relative;
+
+.hero-shape-2 {
+    position: absolute;
+    left: 18%;
+    top: 30%;
 }
+
+.hero-shape-2 img {
+    height: 539px;
+    width: 681px;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 5;
+}
+
 .hero-container h1 {
     font-weight: 600;
-    width: 1024px;
+    width: 1000px;
 }
 
 .hero-container h4 {
@@ -160,4 +213,156 @@ section.hero-section {
     left: -7px;
     top: 31%;
     border-radius: 50%;
+}
+
+.hero-content.row {
+    align-items: center;
+    margin: 30px 0;
+}
+
+.hero-content-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.hero-content-text {
+    padding: 30px;
+}
+
+.hero-content-text p {
+    font-size: 24px;
+}
+
+button.hero-btn {
+    background-color: var(--green);
+    color: var(--black);
+    padding: 15px 55px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    z-index: 1;
+}
+button.hero-btn::after{
+   content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:var(--blue);
+    top: 0;
+    right: 0;
+    clip-path: circle(0% at 0% 100%);
+    transition: 1s ease;
+    z-index: -1; 
+}
+
+button.hero-btn:hover::after {
+    clip-path:circle( 150% at 0% 100%);
+}
+button.hero-btn:hover{
+    color: var(--white);
+}
+
+.hero-circle-img {
+    position: absolute;
+    max-width: 308px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: 28%;
+    right: 40px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.hero-circle-img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+
+/* =======================
+       about-section
+   ====================== */
+
+
+section.about-section {
+    padding: 50px;
+}
+
+.about-container.row {
+    display: flex;
+    align-items: center;
+}
+
+.about-btn {
+    text-align: right;
+}
+
+button.about-btn-1 {
+    background-color: var(--green);
+    color: var(--black);
+    padding: 14px 30px;
+    border-radius: 50px;
+    transition: all 0.8s ease;
+    margin-right: 55px;
+}
+
+button.about-btn-1:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+img.about-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.about-text-1 {
+    font-size: 20px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* ===================
+    services-section 
+   =================== */
+
+section.services-section {
+    padding: 50px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.services-content {
+    padding: 30px 0;
+    border-bottom: 1px solid #6e6c6c;
+    position: relative;
+}
+
+img.services-content-img {
+    position: absolute;
+    width: 324px;
+    top: 10px;
+    right: 0;
+    display: none;
+}
+
+.services-content:hover .services-content-img {
+    display: block;
+}
+
+.services-content img {
+    margin-bottom: 20px;
+}
+
+.services-content p {
+    font-size: 18px;
+    color: #ccc8c8;
+    margin-top: 20px !important;
+    width: 770px;
 }
