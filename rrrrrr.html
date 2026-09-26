@@ -1,0 +1,1317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ronit Kumar | Full Stack Web Developer</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: #f5f5f5;
+            color: #111111;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            width: 100%;
+            padding: 22px 0;
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #e63946;
+        }
+
+        /* =========================
+           COMMON
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-subtitle {
+            color: #e63946;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 45px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            max-width: 700px;
+            color: #666666;
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #e63946;
+        }
+
+        .btn-outline {
+            border: 1px solid #111111;
+            color: #111111;
+        }
+
+        .btn-outline:hover {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: #eeeeee;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-small-heading {
+            color: #e63946;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(45px, 7vw, 85px);
+            line-height: 1;
+            margin-bottom: 30px;
+        }
+
+        .hero-description {
+            max-width: 720px;
+            color: #555555;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .availability {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #ffffff;
+        }
+
+        .about-content {
+            max-width: 900px;
+        }
+
+        .about-content p {
+            color: #555555;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 15px 20px;
+            background: #f5f5f5;
+            font-weight: 600;
+        }
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background: #f5f5f5;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 35px;
+            border: 1px solid #eeeeee;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: #111111;
+        }
+
+        .service-number {
+            font-size: 14px;
+            color: #e63946;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666666;
+        }
+
+        /* =========================
+           PORTFOLIO
+        ========================= */
+
+        .portfolio {
+            background: #ffffff;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .project-card {
+            padding: 35px;
+            background: #f5f5f5;
+            border: 1px solid #eeeeee;
+        }
+
+        .project-card span {
+            color: #e63946;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .project-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 27px;
+            margin: 10px 0;
+        }
+
+        .project-tech {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #666666;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        .skills .section-description {
+            color: #bbbbbb;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .skill-card {
+            padding: 30px;
+            border: 1px solid #333333;
+        }
+
+        .skill-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+            margin-bottom: 10px;
+        }
+
+        .skill-card p {
+            color: #bbbbbb;
+        }
+
+        /* =========================
+           WORK PROCESS
+        ========================= */
+
+        .process {
+            background: #ffffff;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .process-card {
+            padding: 30px;
+            background: #f5f5f5;
+            border-top: 4px solid #e63946;
+        }
+
+        .process-number {
+            font-size: 14px;
+            color: #e63946;
+            font-weight: 700;
+        }
+
+        .process-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 23px;
+            margin: 12px 0;
+        }
+
+        .process-card p {
+            color: #666666;
+        }
+
+        /* =========================
+           WHY WORK WITH ME
+        ========================= */
+
+        .why-me {
+            background: #f5f5f5;
+        }
+
+        .why-list {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .why-list li {
+            background: #ffffff;
+            padding: 18px 20px;
+            border-left: 4px solid #e63946;
+            font-weight: 500;
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: #e63946;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cta .section-title {
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta .btn {
+            background: #ffffff;
+            color: #111111;
+        }
+
+        .cta .btn:hover {
+            background: #111111;
+            color: #ffffff;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            background: #ffffff;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-top: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-item {
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .contact-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .contact-item a {
+            color: #555555;
+        }
+
+        .contact-item a:hover {
+            color: #e63946;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #111111;
+            color: #ffffff;
+            padding: 60px 0 25px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 27px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .footer-bio {
+            color: #bbbbbb;
+            max-width: 450px;
+        }
+
+        .footer-title {
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-nav a {
+            color: #bbbbbb;
+        }
+
+        .footer-nav a:hover {
+            color: #ffffff;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .social-links a {
+            color: #bbbbbb;
+        }
+
+        .social-links a:hover {
+            color: #ffffff;
+        }
+
+        .copyright {
+            border-top: 1px solid #333333;
+            padding-top: 20px;
+            color: #888888;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 992px) {
+
+            .services-grid,
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            section {
+                padding: 70px 0;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .skills-grid,
+            .process-grid,
+            .why-list,
+            .contact-wrapper,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 80vh;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: 92%;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .section-title {
+                font-size: 31px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+                RONIT KUMAR
+            </a>
+
+            <nav class="nav-menu">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         STEP 1 - HERO
+    ========================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-small-heading">
+                    FULL STACK WEB DEVELOPER
+                </div>
+
+                <h1>
+                    Turning Ideas Into Modern & Interactive Web Experiences
+                </h1>
+
+                <p class="hero-description">
+                    Hi, I'm Ronit Kumar, a Full Stack Web Developer focused on building responsive, user-friendly and modern websites. I work with HTML, CSS, Bootstrap, JavaScript and Node.js to create clean and functional web experiences.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        Contact Me
+                    </a>
+
+                </div>
+
+                <div class="availability">
+                    Available for Web Development Projects
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 2 - ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="about-content">
+
+                <div class="section-subtitle">
+                    About Me
+                </div>
+
+                <h2 class="section-title">
+                    Building Websites From Frontend to Backend
+                </h2>
+
+                <p>
+                    I’m Ronit Kumar, a passionate Full Stack Web Developer who enjoys turning ideas into responsive and functional websites. I focus on creating clean layouts, interactive interfaces and reliable web functionality using modern web technologies.
+                </p>
+
+                <p>
+                    My core technologies include HTML, CSS, Bootstrap, JavaScript and Node.js. I continuously improve my development skills by building practical projects and exploring better ways to create fast, responsive and user-friendly websites.
+                </p>
+
+                <div class="highlight">
+                    Clean Code • Responsive Design • Interactive UI • Full Stack Development
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 3 - SERVICES
+    ========================== -->
+
+    <section class="services" id="services">
+
+        <div class="container">
+
+            <div class="section-subtitle">
+                Services / What I Do
+            </div>
+
+            <h2 class="section-title">
+                What I Do
+            </h2>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+
+                    <div class="service-number">01</div>
+
+                    <h3>HTML Development</h3>
+
+                    <p>
+                        I create well-structured and semantic HTML layouts that provide a strong foundation for responsive and accessible websites.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-number">02</div>
+
+                    <h3>CSS Development</h3>
+
+                    <p>
+                        I design modern and responsive interfaces using CSS, animations, transitions, layouts and custom styling to create engaging user experiences.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-number">03</div>
+
+                    <h3>Bootstrap Development</h3>
+
+                    <p>
+                        I use Bootstrap to build responsive and mobile-friendly websites with flexible layouts, reusable components and consistent design.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-number">04</div>
+
+                    <h3>JavaScript Development</h3>
+
+                    <p>
+                        I add interactive functionality to websites using JavaScript, including dynamic elements, form validation, sliders, navigation, buttons and user interactions.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-number">05</div>
+
+                    <h3>Node.js Development</h3>
+
+                    <p>
+                        I use Node.js to develop backend functionality and server-side applications, connecting frontend interfaces with APIs and backend logic.
+                    </p>
+
+                </div>
+
+
+                <div class="service-card">
+
+                    <div class="service-number">06</div>
+
+                    <h3>Full Stack Web Development</h3>
+
+                    <p>
+                        I combine frontend and backend technologies to build complete web applications that are responsive, interactive and functional from end to end.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 4 - PORTFOLIO
+    ========================== -->
+
+    <section class="portfolio" id="projects">
+
+        <div class="container">
+
+            <div class="section-subtitle">
+                Portfolio / My Work
+            </div>
+
+            <h2 class="section-title">
+                Projects I've Built
+            </h2>
+
+            <p class="section-description">
+                A collection of web development projects created using modern frontend and backend technologies.
+            </p>
+
+
+            <div class="portfolio-grid">
+
+                <div class="project-card">
+
+                    <span>PROJECT 01</span>
+
+                    <h3>E-Commerce Website</h3>
+
+                    <div class="project-tech">
+                        Technology: HTML, CSS, Bootstrap, JavaScript
+                    </div>
+
+                    <p>
+                        A responsive e-commerce interface featuring product listings, category filtering, shopping cart interactions and a modern checkout experience.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <span>PROJECT 02</span>
+
+                    <h3>Personal Portfolio</h3>
+
+                    <div class="project-tech">
+                        Technology: HTML, CSS, Bootstrap, JavaScript
+                    </div>
+
+                    <p>
+                        A responsive personal portfolio website designed to showcase skills, projects, services and professional information.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <span>PROJECT 03</span>
+
+                    <h3>Interactive Web Application</h3>
+
+                    <div class="project-tech">
+                        Technology: HTML, CSS, JavaScript, Node.js
+                    </div>
+
+                    <p>
+                        A dynamic web application combining an interactive frontend with backend functionality powered by Node.js.
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <span>PROJECT 04</span>
+
+                    <h3>Responsive Business Website</h3>
+
+                    <div class="project-tech">
+                        Technology: HTML, CSS, Bootstrap, JavaScript
+                    </div>
+
+                    <p>
+                        A clean and professional business website focused on responsive design, clear navigation and engaging user interactions.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 5 - SKILLS
+    ========================== -->
+
+    <section class="skills" id="skills">
+
+        <div class="container">
+
+            <div class="section-subtitle">
+                Skills Section
+            </div>
+
+            <h2 class="section-title">
+                Technologies I Work With
+            </h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Semantic & Structured Web Development</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Responsive Design & Modern Styling</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Bootstrap</h3>
+                    <p>Mobile-First Responsive Interfaces</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Interactive & Dynamic Web Experiences</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Node.js</h3>
+                    <p>Backend Development & Server-Side Applications</p>
+                </div>
+
+                <div class="skill-card">
+                    <h3>Full Stack</h3>
+                    <p>Frontend + Backend Web Development</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 6 - WORK PROCESS
+    ========================== -->
+
+    <section class="process">
+
+        <div class="container">
+
+            <div class="section-subtitle">
+                Work Process
+            </div>
+
+            <h2 class="section-title">
+                Plan → Code → Test → Deploy
+            </h2>
+
+            <div class="process-grid">
+
+                <div class="process-card">
+
+                    <div class="process-number">01</div>
+
+                    <h3>Plan</h3>
+
+                    <p>
+                        Understand the project requirements, goals and required features before development begins.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">02</div>
+
+                    <h3>Design & Develop</h3>
+
+                    <p>
+                        Build the responsive interface and implement functionality using the appropriate technologies.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">03</div>
+
+                    <h3>Test</h3>
+
+                    <p>
+                        Test layouts, interactions, responsiveness and functionality across different screen sizes.
+                    </p>
+
+                </div>
+
+
+                <div class="process-card">
+
+                    <div class="process-number">04</div>
+
+                    <h3>Deploy</h3>
+
+                    <p>
+                        Prepare the completed website for deployment and ensure the final product works smoothly.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 7 - WHY WORK WITH ME
+    ========================== -->
+
+    <section class="why-me">
+
+        <div class="container">
+
+            <div class="section-subtitle">
+                Why Work With Me
+            </div>
+
+            <h2 class="section-title">
+                Focused on Clean Code & Better User Experiences
+            </h2>
+
+            <ul class="why-list">
+
+                <li>Responsive and mobile-friendly websites</li>
+
+                <li>Clean and organized code</li>
+
+                <li>Modern UI development</li>
+
+                <li>Interactive JavaScript functionality</li>
+
+                <li>Frontend and backend development</li>
+
+                <li>Continuous learning and improvement</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 8 - CTA
+    ========================== -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2 class="section-title">
+                Let's Turn Your Idea Into a Website
+            </h2>
+
+            <p>
+                Have a website idea or project in mind? Let's build a modern, responsive and functional web experience together.
+            </p>
+
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 9 - CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-subtitle">
+                Contact
+            </div>
+
+            <h2 class="section-title">
+                Let's Work Together
+            </h2>
+
+            <p class="section-description">
+                I'm open to web development projects, collaborations and opportunities where I can use my skills to create useful and engaging digital experiences.
+            </p>
+
+
+            <div class="contact-wrapper">
+
+                <div class="contact-info">
+
+                    <div class="contact-item">
+
+                        <strong>Name</strong>
+
+                        <span>Ronit Kumar</span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>Phone</strong>
+
+                        <a href="tel:8219606863">
+                            8219606863
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>Email</strong>
+
+                        <a href="mailto:ronit810a@gmail.com">
+                            ronit810a@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-info">
+
+                    <div class="contact-item">
+
+                        <strong>GitHub</strong>
+
+                        <a href="https://github.com/ronit810A" target="_blank">
+                            ronit810A
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>LinkedIn</strong>
+
+                        <a href="https://www.linkedin.com/in/ronit810a/" target="_blank">
+                            ronit810a
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>Instagram</strong>
+
+                        <a href="https://www.instagram.com/ronit_kumar_810" target="_blank">
+                            @ronit_kumar_810
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STEP 10 - FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <div class="footer-logo">
+                        RONIT KUMAR
+                    </div>
+
+                    <p class="footer-bio">
+                        Ronit Kumar — Full Stack Web Developer creating responsive, interactive and modern web experiences using HTML, CSS, Bootstrap, JavaScript and Node.js.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Footer Navigation
+                    </h3>
+
+                    <div class="footer-nav">
+
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Skills</a>
+                        <a href="#services">Services</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="footer-title">
+                        Social Links
+                    </h3>
+
+                    <div class="social-links">
+
+                        <a href="https://github.com/ronit810A" target="_blank">
+                            GitHub – Ronit Kumar
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/ronit810a/" target="_blank">
+                            LinkedIn – Ronit Kumar
+                        </a>
+
+                        <a href="https://www.instagram.com/ronit_kumar_810" target="_blank">
+                            Instagram – @ronit_kumar_810
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+                © 2026 Ronit Kumar. All Rights Reserved.
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
