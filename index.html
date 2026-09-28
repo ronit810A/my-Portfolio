@@ -371,28 +371,34 @@
                             </div>
 
 
-                            <form action="" class="contact-form">
+                            <form action="https://formsubmit.co/ronit810a@gmail.com" method="POST" class="contact-form">
                                 <div class="contact-form-box">
                                     <div class="contact-form-box-a">
                                         <label for="name">NAME</label>
                                         <div class="contact-form-input">
-                                            <input type="text" name="name" id="name" placeholder="Your Name">
+                                            <input type="text" name="name" id="name" placeholder="Your Name" required>
                                         </div>
                                     </div>
                                     <div class="contact-form-box-b">
                                         <label for="email">EMAIL</label>
                                         <div class="contact-form-input">
-                                            <input type="email" name="email" id="email" placeholder="xxx@gmail.com">
+                                            <input type="email" name="email" id="email" placeholder="xxx@gmail.com"
+                                                required>
                                         </div>
                                     </div>
                                 </div>
                                 <label for="msg">MESSAGE</label>
                                 <div class="contact-msg">
-                                    <textarea name="msg" id="msg" placeholder="message"></textarea>
+                                    <textarea name="msg" id="msg" placeholder="message" required></textarea>
                                 </div>
+
+                                <!-- FormSubmit settings -->
+                                <input type="hidden" name="_subject" value="New Contact Form Message">
+                                <input type="hidden" name="_captcha" value="false">
+
                                 <div class="contact-info">
                                     <div class="contact-form-btn">
-                                        <a href="mailto:ronit810a@gmail.com">SEND MASSAGE</a>
+                                        <button type="submit">SEND MESSAGE</button>
                                     </div>
                                     <div class="info-box">
                                         <a href="mailto:ronit810a@gmail.com">ronit810a@gmail.com</a>

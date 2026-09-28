@@ -404,7 +404,7 @@ section.project-section {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(100deg, #0066ff, #00c853);
+    background: var(--blue);
 
     clip-path: polygon(0 50%,
             100% 50%,
@@ -498,7 +498,7 @@ section.process-section {
 
 .why-me {
     padding: 50px;
-    background: linear-gradient(25deg, #0066ff, #00c853);
+    background: var(--blue);
     color: white;
 }
 
@@ -620,7 +620,7 @@ label {
     justify-content: space-between;
 }
 
-.contact-form-btn a {
+.contact-form-btn button {
     padding: 15px 25px;
     background: #8cff00;
     color: #111;
@@ -631,7 +631,7 @@ label {
     transition: 0.3s ease;
 }
 
-.contact-form-btn a:hover {
+.contact-form-btn button:hover {
     background-color: var(--black);
     color: var(--white);
 }
