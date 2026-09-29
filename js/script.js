@@ -37,3 +37,46 @@ window.addEventListener("scroll", function () {
     header.classList.remove("header-white");
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const processSection = document.querySelector(".process-stack");
+
+    if (!processSection) return;
+
+    const observer = new IntersectionObserver(
+        function (entries) {
+
+            entries.forEach(function (entry) {
+
+                if (entry.isIntersecting) {
+
+                    processSection.classList.add("active");
+
+                } else {
+
+                    processSection.classList.remove("active");
+
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.25
+        }
+    );
+
+    observer.observe(processSection);
+
+});
