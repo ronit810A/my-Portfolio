@@ -86,22 +86,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
 $(document).ready(function () {
 
     $('.about-slider').slick({
+        infinite: true,
         autoplay: true,
         autoplaySpeed: 2000,
-        speed: 600,
-
-        draggable: true,
-        infinite: true,
+        speed: 700,
 
         slidesToShow: 3,
         slidesToScroll: 1,
 
         arrows: false,
         dots: false,
+
+        pauseOnHover: false,
+        pauseOnFocus: false,
 
         responsive: [
             {
@@ -112,7 +112,7 @@ $(document).ready(function () {
                 }
             },
             {
-                breakpoint: 575,
+                breakpoint: 768,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -122,4 +122,3 @@ $(document).ready(function () {
     });
 
 });
-
