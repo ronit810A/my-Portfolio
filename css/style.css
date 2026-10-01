@@ -1245,18 +1245,34 @@ section.about-focus-section {
 .about-focus-content.row {
     padding-top: 30px;
 }
-.about-focus-box img {
-    width: 70px;
-}
+
 .about-focus-box {
     padding: 20px;
     border-right: 1px solid var(--border-black);
     height: 287px;
 }
+.about-focus-box img {
+    width: 70px;
+}
 .about-focus-box h4 {
     padding: 10px 0;
 }
 .about-focus-box p {
+    font-size: 17px;
+    color: var(--light-gray);
+}
+
+.about-focus-box-a {
+    padding: 20px;
+    height: 287px;
+}
+.about-focus-box-a img {
+    width: 70px;
+}
+.about-focus-box-a h4 {
+    padding: 10px 0;
+}
+.about-focus-box-a p {
     font-size: 17px;
     color: var(--light-gray);
 }

@@ -188,6 +188,76 @@
         padding: 8px 14px;
     }
 
+
+
+
+
+    .bread-top-shape {
+        position: relative;
+        opacity: 0.7;
+    }
+section.page-section {
+    padding: 120px 10px 10px;
+}
+.page-container {
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.page-container p {
+    width: auto;
+}
+.about-page-container.row {
+    padding: 10px;
+    border-radius: 0;
+}
+.about-page-content p {
+    width: auto;
+}
+.about-page-content button {
+    margin: 30px 0;
+}
+
+section.about-wid-section {
+    padding: 10px;
+}
+.about-wid-content-left h2 {
+    font-size: 34px !important;
+}
+.about-wid-content-left p {
+    padding: 5px 0;
+    width: auto;
+}
+.about-wid-content-left button {
+    margin: 20px 0;
+}
+.about-wid-box {
+    height: auto;
+}
+.about-slider-section {
+    padding: 10px 0;
+}
+section.about-tech-section {
+    padding: 10px;
+}
+.about-tech-box {
+    padding: 20px;
+    height: auto;
+}
+section.about-focus-section {
+    padding: 10px;
+}
+.about-focus-box {
+    border-bottom: 1px solid var(--border-black);
+    border-right:none ;
+    height: auto;
+}
+
+
+
+
+
+
 }
 
 
