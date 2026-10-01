@@ -1298,6 +1298,7 @@ section.about-focus-section {
 
 section.portfolio-project-section {
     padding: 50px;
+    position: relative;
 }
 .portfolio-project-container.row {
     padding-bottom: 30px;

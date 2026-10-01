@@ -284,6 +284,24 @@
 
 
 
+
+
+    section.portfolio-project-section {
+    padding: 10px;
+}
+.portfolio-project-content li {
+    align-items: start;
+    gap: 5px;
+    flex-direction: column;
+}
+.portfolio-project-content span {
+    width: auto;
+}
+
+
+
+
+
 }
 
 
@@ -613,6 +631,21 @@
         border-radius: 30px;
     }
 
+
+
+
+
+
+
+    .portfolio-project-container .col-md-4 {
+    width: 100%;
+}
+.portfolio-project-container .col-md-8 {
+    width: 100%;
+}
+.portfolio-project-content span {
+    width: auto;
+}
 
 
 
