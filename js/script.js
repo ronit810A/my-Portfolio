@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function () {
 
-    $('.about-slider').slick({
+    $('.about-slider-section').slick({
         infinite: true,
         autoplay: true,
         autoplaySpeed: 2000,
