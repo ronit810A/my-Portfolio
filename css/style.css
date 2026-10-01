@@ -1394,3 +1394,32 @@ section.services-service-section {
 .services-service-img img {
     width: 140px;
 }
+
+
+
+
+
+/* ========================================================================================================
+=============================================================================================================
+                             xxxxx---contact-page-section---xxxxx
+============================================================================================================
+ ========================================================================================================= */
+
+ section.contact-page-section {
+    padding: 50px;
+    position: relative;
+}
+.contact-page-box img {
+    width: 90px;
+    height: 83px;
+    margin-bottom: 10px;
+}
+.contact-page-content.row {
+    padding: 30px 0;
+}
+.contact-page-box {
+    border: 1px solid var(--black);
+    padding: 50px;
+    height: 300px;
+    border-radius: 10px;
+}

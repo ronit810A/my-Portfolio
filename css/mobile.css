@@ -332,6 +332,17 @@
 
 
 
+    section.contact-page-section {
+        padding: 10px;
+    }
+
+    .contact-page-box {
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+
+
+
 
 }
 
@@ -699,6 +710,20 @@
         margin-right: 40px;
     }
 
+    .services-page-img img {
+        height: auto;
+    }
+
+
+
+
+
+
+
+    .contact-page-content .col-md-4 {
+        width: 50%;
+        margin-bottom: 20px;
+    }
 
 
 

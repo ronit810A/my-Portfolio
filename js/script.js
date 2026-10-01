@@ -105,7 +105,7 @@ $(document).ready(function () {
 
         responsive: [
             {
-                breakpoint: 991,
+                breakpoint: 1100,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 1
