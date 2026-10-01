@@ -1300,20 +1300,25 @@ section.portfolio-project-section {
     padding: 50px;
     position: relative;
 }
+
 .portfolio-project-container.row {
     padding-bottom: 30px;
     align-items: center;
 }
+
 .portfolio-project-content {
     padding-right: 20px;
 }
+
 .portfolio-project-content h3 {
     font-size: 45px !important;
     font-weight: 700;
 }
+
 .portfolio-project-content ul {
     padding: 10px 0;
 }
+
 .portfolio-project-content li {
     display: flex;
     align-items: center;
@@ -1321,22 +1326,71 @@ section.portfolio-project-section {
     gap: 20px;
     padding: 10px 0;
 }
+
 .portfolio-project-content span {
     font-size: 17px;
     font-weight: 700;
     width: 100px;
 }
+
 .portfolio-project-content p {
     font-size: 16px;
 }
+
 .portfolio-project-content a {
     text-decoration: none;
     color: var(--blue);
     font-size: 18px;
 }
+
 .portfolio-project-img {
     width: 100%;
     border: 1px solid;
     border-radius: 10px;
     overflow: hidden;
+}
+
+/* ===============================================================================================
+   ===============================================================================================
+                             xxxxx---services-page-section---xxxxx
+  ================================================================================================
+  ================================================================================================= */
+.services-page {
+    position: relative;
+    padding: 30px;
+}
+
+.services-page-img img {
+    height: 570px;
+    border-radius: 10px;
+}
+
+section.services-service-section {
+    padding: 50px;
+}
+
+.services-service-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.services-service-content {
+    padding: 20px;
+    border: 1px solid var(--black);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.services-service-box {
+    width: 380px;
+}
+
+.services-service-box p {
+    font-size: 18px;
+}
+
+.services-service-img img {
+    width: 140px;
 }
