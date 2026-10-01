@@ -1239,9 +1239,11 @@ section.about-focus-section {
     color: var(--white);
     background-color: var(--blue);
 }
+
 .about-focus-container h2 {
     font-weight: 700;
 }
+
 .about-focus-content.row {
     padding-top: 30px;
 }
@@ -1251,12 +1253,15 @@ section.about-focus-section {
     border-right: 1px solid var(--border-black);
     height: 287px;
 }
+
 .about-focus-box img {
     width: 70px;
 }
+
 .about-focus-box h4 {
     padding: 10px 0;
 }
+
 .about-focus-box p {
     font-size: 17px;
     color: var(--light-gray);
@@ -1266,13 +1271,71 @@ section.about-focus-section {
     padding: 20px;
     height: 287px;
 }
+
 .about-focus-box-a img {
     width: 70px;
 }
+
 .about-focus-box-a h4 {
     padding: 10px 0;
 }
+
 .about-focus-box-a p {
     font-size: 17px;
     color: var(--light-gray);
+}
+
+
+
+
+
+
+/* =======================================================================================================
+===========================================================================================================
+                                xxxxx---portfolio-section---xxxxx
+===========================================================================================================
+=========================================================================================================*/
+
+section.portfolio-project-section {
+    padding: 50px;
+}
+.portfolio-project-container.row {
+    padding-bottom: 30px;
+    align-items: center;
+}
+.portfolio-project-content {
+    padding-right: 20px;
+}
+.portfolio-project-content h3 {
+    font-size: 45px !important;
+    font-weight: 700;
+}
+.portfolio-project-content ul {
+    padding: 10px 0;
+}
+.portfolio-project-content li {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    padding: 10px 0;
+}
+.portfolio-project-content span {
+    font-size: 17px;
+    font-weight: 700;
+    width: 100px;
+}
+.portfolio-project-content p {
+    font-size: 16px;
+}
+.portfolio-project-content a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 18px;
+}
+.portfolio-project-img {
+    width: 100%;
+    border: 1px solid;
+    border-radius: 10px;
+    overflow: hidden;
 }
